@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit & Currency Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="brand">
+            <span class="brand-icon">⇄</span>
+            <h1>Convertly</h1>
+        </div>
+        <span class="status">● All systems operational</span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <span class="eyebrow">SMART CONVERSION TOOL</span>
+
+            <h2>Convert anything.<br>
+                <span>Instantly.</span>
+            </h2>
+
+            <p>
+                A simple and powerful converter for units and currencies,
+                with intelligent client-side caching.
+            </p>
+        </section>
+
+        <section class="converter-card">
+
+            <div class="tabs">
+                <button class="tab active" data-type="length">
+                    Length
+                </button>
+
+                <button class="tab" data-type="weight">
+                    Weight
+                </button>
+
+                <button class="tab" data-type="temperature">
+                    Temperature
+                </button>
+
+                <button class="tab" data-type="currency">
+                    Currency
+                </button>
+            </div>
+
+            <div class="conversion-area">
+
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+
+                    <input
+                        type="number"
+                        id="amount"
+                        value="1"
+                        min="0"
+                        step="any"
+                        placeholder="Enter amount"
+                    >
+                </div>
+
+                <div class="unit-row">
+
+                    <div class="input-group">
+                        <label for="fromUnit">From</label>
+                        <select id="fromUnit"></select>
+                    </div>
+
+                    <button id="swapBtn" class="swap-btn"
+                            title="Swap units">
+                        ⇄
+                    </button>
+
+                    <div class="input-group">
+                        <label for="toUnit">To</label>
+                        <select id="toUnit"></select>
+                    </div>
+
+                </div>
+
+                <button id="convertBtn" class="convert-btn">
+                    Convert Now →
+                </button>
+
+                <div class="result-box">
+                    <p class="result-label">CONVERTED RESULT</p>
+
+                    <h2 id="result">1.00</h2>
+
+                    <p id="resultDescription">
+                        1 Meter = 1 Meter
+                    </p>
+                </div>
+
+                <div class="cache-info">
+                    <span>⚡</span>
+                    <p id="cacheStatus">
+                        Client-side caching enabled
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="features">
+
+            <div class="feature-card">
+                <span>⚡</span>
+                <h3>Instant Results</h3>
+                <p>Fast conversions with optimized calculations.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>🔒</span>
+                <h3>Local Caching</h3>
+                <p>Previously calculated results are stored in your browser.</p>
+            </div>
+
+            <div class="feature-card">
+                <span>🌐</span>
+                <h3>Multi-Unit Support</h3>
+                <p>Convert length, weight, temperature and currency.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Unit & Currency Converter UI | DevOps Level 2 Project</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
