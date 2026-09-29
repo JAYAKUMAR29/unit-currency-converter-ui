@@ -1,0 +1,20 @@
+---
+- name: Configure Unit and Currency Converter
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Display project information
+      debug:
+        msg: "Ansible is successfully managing our DevOps project!"
+
+    - name: Check project directory
+      stat:
+        path: /mnt/c/Projects/unit-currency-converter-ui
+      register: project_dir
+
+    - name: Confirm project directory exists
+      debug:
+        msg: "Project directory exists!"
+      when: project_dir.stat.exists
